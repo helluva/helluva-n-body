@@ -1,0 +1,11 @@
+
+
+
+acceleration = array of type [(point: int) -> (xAccel: float, yAccel: float)]
+gravity = array of type [(point1: int, point2: int) -> (xGravity: float, yGravity: float)]
+
+for(i from 0 n-2)
+    for(j from i+1 to n-1)
+        gravity (i, j) = // gravity formula
+        acceleration [i] += gravity (i, j)
+        acceleration [j] -= gravity (i, j)
